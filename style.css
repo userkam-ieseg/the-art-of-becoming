@@ -1,7 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap');
 
-/* COLORS */
+/* COLOUR PALETTE */
 
 :root {
   --cream: #F5EEDF;
@@ -174,7 +174,7 @@ h1 {
 }
 
 .intro {
-  max-width: 700px;
+  max-width: 850px;
   font-size: 19px;
   line-height: 1.9;
 }
@@ -200,14 +200,16 @@ h1 {
   background: var(--yellow);
 }
 
-/* ABOUT ME */
+/* EDITORIAL TEXT */
 
-.about-text {
+.about-text,
+.editorial-text {
   max-width: 800px;
   margin-top: 40px;
 }
 
-.about-text p {
+.about-text p,
+.editorial-text p {
   font-size: 19px;
   line-height: 1.95;
   margin-bottom: 28px;
@@ -225,16 +227,18 @@ h1 {
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-  margin-top: 50px;
+  gap: 25px;
+  margin-top: 55px;
+  align-items: stretch;
 }
 
 .card {
   min-height: 240px;
-  padding: 35px 28px;
-  border-radius: 18px;
+  padding: 35px 30px;
+  border-radius: 20px;
   background: white;
   color: var(--black);
+  border: 1px solid rgba(51, 74, 203, 0.08);
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -245,44 +249,17 @@ h1 {
 }
 
 .card-icon {
-  font-size: 35px;
+  font-size: 42px;
   color: var(--pink);
 }
 
 .card h3 {
-  font-size: 27px;
+  margin: 22px 0;
+  font-size: 29px;
   color: var(--blue);
 }
 
-/* RELATIONSHIP SKILLS */
-
-#growth .intro {
-  max-width: 850px;
-  margin-bottom: 24px;
-}
-
-#growth .cards {
-  align-items: stretch;
-  gap: 25px;
-  margin-top: 55px;
-}
-
-#growth .card {
-  padding: 35px 30px;
-  border-radius: 20px;
-  border: 1px solid rgba(51, 74, 203, 0.08);
-}
-
-#growth .card-icon {
-  font-size: 42px;
-}
-
-#growth .card h3 {
-  margin: 22px 0;
-  font-size: 29px;
-}
-
-#growth .card p {
+.card p {
   font-size: 15px;
   line-height: 1.9;
   margin-bottom: 18px;
@@ -300,7 +277,27 @@ blockquote {
   color: var(--blue);
 }
 
-/* SKILLS */
+/* BUSINESS */
+
+.scenario-label {
+  display: inline-block;
+  margin-top: 35px;
+  padding: 10px 16px;
+  border: 1px solid rgba(255,255,255,0.7);
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.business-takeaway {
+  max-width: 850px;
+  margin-top: 45px;
+  font-size: 19px;
+  line-height: 1.9;
+}
+
+/* WEB DEVELOPMENT */
 
 .skills {
   display: flex;
@@ -318,6 +315,20 @@ blockquote {
   font-weight: 700;
 }
 
+/* FUTURE */
+
+.closing-statement {
+  max-width: 850px;
+  margin-top: 55px;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(30px, 4vw, 52px);
+  line-height: 1.35;
+}
+
+.closing-statement em {
+  color: var(--blue);
+}
+
 /* FOOTER */
 
 footer {
@@ -329,7 +340,7 @@ footer {
   letter-spacing: 2px;
 }
 
-/* ANIMATION */
+/* ANIMATIONS */
 
 @keyframes fadeUp {
   from {
@@ -346,6 +357,7 @@ footer {
 /* MOBILE */
 
 @media (max-width: 750px) {
+
   .navbar {
     flex-direction: column;
     text-align: center;
@@ -369,24 +381,26 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .intro {
-    font-size: 17px;
-  }
-
-  .about-text p {
+  .intro,
+  .about-text p,
+  .editorial-text p {
     font-size: 16px;
   }
 
-  #growth .card {
+  .card {
     padding: 28px;
   }
 
-  #growth .card p {
+  .card p {
     font-size: 15px;
   }
 
   .hero-decoration {
     opacity: 0.12;
+  }
+
+  .closing-statement {
+    font-size: 32px;
   }
 }
 
